@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="iPhone 16 Pro - iOS 18.6 - 106CD2EC-B707-4363-B122-C0959997864A" tests="4" failures="0" time="33.0">
+    <testcase id="Checkout does not continue without an address" name="Checkout does not continue without an address" classname="Checkout does not continue without an address" file="flows/04-address-required.yaml" time="12.0" status="SUCCESS"/>
+    <testcase id="Cart total follows quantity" name="Cart total follows quantity" classname="Cart total follows quantity" file="flows/02-cart-total.yaml" time="7.0" status="SUCCESS"/>
+    <testcase id="Catalog opens a product with its price" name="Catalog opens a product with its price" classname="Catalog opens a product with its price" file="flows/01-catalog.yaml" time="4.0" status="SUCCESS"/>
+    <testcase id="Signed-out shopper must log in to check out" name="Signed-out shopper must log in to check out" classname="Signed-out shopper must log in to check out" file="flows/03-checkout-needs-login.yaml" time="10.0" status="SUCCESS"/>
+  </testsuite>
+</testsuites>

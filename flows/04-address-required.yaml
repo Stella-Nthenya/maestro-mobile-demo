@@ -1,0 +1,20 @@
+appId: com.saucelabs.mydemo.app.ios
+name: Checkout does not continue without an address
+---
+- runFlow: ../subflows/add-backpack.yaml
+- tapOn:
+    id: "ProceedToCheckout"
+- tapOn: "bob@example.com"
+- tapOn:
+    text: "Login"
+    index: 1
+- assertVisible:
+    id: "ShippingAddress-screen"
+- tapOn:
+    text: "To Payment"
+    index: 0
+- assertVisible: "Validation Error!"
+- assertVisible: "Please provide your full name."
+- tapOn: "OK"
+- assertVisible:
+    id: "ShippingAddress-screen"

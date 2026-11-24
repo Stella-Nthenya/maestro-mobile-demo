@@ -1,0 +1,7 @@
+appId: com.saucelabs.mydemo.app.ios
+name: Cart colour matches the product added
+---
+- runFlow: ../subflows/add-backpack.yaml
+- assertVisible: "Sauce Labs Backpack - Black"
+- takeScreenshot: results/cart-colour
+- assertNotVisible: "Green"

@@ -1,0 +1,15 @@
+appId: com.saucelabs.mydemo.app.ios
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: "Catalog-screen"
+- tapOn: "Sauce Labs Backpack - Black"
+- assertVisible:
+    id: "ProductDetails-screen"
+- tapOn:
+    id: "AddToCart"
+- tapOn:
+    id: "Cart-tab-item"
+- assertVisible:
+    id: "Cart-screen"

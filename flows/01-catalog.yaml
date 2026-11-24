@@ -1,0 +1,14 @@
+appId: com.saucelabs.mydemo.app.ios
+name: Catalog opens a product with its price
+---
+- launchApp:
+    clearState: true
+- assertVisible:
+    id: "Catalog-screen"
+- tapOn: "Sauce Labs Backpack - Green"
+- assertVisible:
+    id: "ProductDetails-screen"
+- assertVisible: "Sauce Labs Backpack - Green"
+- assertVisible:
+    id: "Price"
+    text: ".*29\\.99"

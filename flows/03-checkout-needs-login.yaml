@@ -1,0 +1,15 @@
+appId: com.saucelabs.mydemo.app.ios
+name: Signed-out shopper must log in to check out
+---
+- runFlow: ../subflows/add-backpack.yaml
+- tapOn:
+    id: "ProceedToCheckout"
+- assertVisible: "Select a username from the list below"
+- assertNotVisible:
+    id: "ShippingAddress-screen"
+- tapOn: "bob@example.com"
+- tapOn:
+    text: "Login"
+    index: 1
+- assertVisible:
+    id: "ShippingAddress-screen"

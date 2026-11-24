@@ -1,0 +1,9 @@
+appId: com.saucelabs.mydemo.app.ios
+name: Cart total follows quantity
+---
+- runFlow: ../subflows/add-backpack.yaml
+- assertVisible: "1 Items"
+- assertVisible: "\\$29\\.99"
+- tapOn: "AddPlus Icons"
+- assertVisible: "2 Items"
+- assertVisible: "\\$59\\.98"

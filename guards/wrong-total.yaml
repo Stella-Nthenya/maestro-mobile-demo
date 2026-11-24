@@ -1,0 +1,7 @@
+appId: com.saucelabs.mydemo.app.ios
+name: "GUARD must fail: wrong total"
+---
+- runFlow: ../subflows/add-backpack.yaml
+- tapOn: "AddPlus Icons"
+- assertVisible: "2 Items"
+- assertVisible: "\\$89\\.97"

@@ -1,0 +1,8 @@
+appId: com.saucelabs.mydemo.app.ios
+name: "GUARD must fail: checkout reached without login"
+---
+- runFlow: ../subflows/add-backpack.yaml
+- tapOn:
+    id: "ProceedToCheckout"
+- assertVisible:
+    id: "ShippingAddress-screen"
